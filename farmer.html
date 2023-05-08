@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Farmer</title>
+</head>
+<body>
+    <!-- HTML code for the modal dialog -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <h2>Custom message goes here</h2>
+          <input id="modalInp" type="number" placeholder="QR Digit">
+          <button class="close" id="modalBtn">Close</button>
+        </div>
+      </div>
+      <!-- HTML code that is displayed -->
+    <div id="image">
+        <div id="navbar">
+            <h1 id = "logInfo">Login: Farmer/VDCS</h1>
+        </div>
+        <div id="container1">
+            <div id="tab">
+                <!-- Tab links -->
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Add Product')">Add Product</button>
+                    <button class="tablinks" onclick="openTab(event, 'View Products'); pdtTag()">View Products</button>
+                </div>
+                <!-- Tab content -->
+                <div id="tabContent">
+                    <div id="Add Product" class="tabcontent">
+                        <form class="tabform">
+                            <h2 class="tabHeading">Add Product</h2>
+                            <label>
+                              Product Name:
+                              <input type="text" id="productName" placeholder="Product Name">
+                            </label>
+                            <br>
+                            <label>
+                              Quantity:
+                              <input type="number" id="quantity" placeholder="Product Quantity">
+                            </label>
+                            <br>
+                            <label>
+                              Date of Milking:
+                              <input type="date" id="dateOfMilking">
+                            </label>
+                            <br>
+                            <label>
+                              Product Hash:
+                              <input type="number" id="prodHash" placeholder="ETH Hash">
+                            </label>
+                            <br>
+                            <button type="submit" onclick="addPdt()">Submit</button>
+                        </form>
+                    </div>
+                  
+                    <div id="View Products" class="tabcontent">
+                        <form class="tabform">
+                            <h2 class="tabHeading">View Products (Based on entry order)</h2>
+                            <ul class="list scroll-container">
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="assets/js/web3.min.js"></script>
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/contracts.js"></script>
+</body>
+</html>

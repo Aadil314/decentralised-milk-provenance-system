@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Admin</title>
+</head>
+<body>
+    <!-- HTML code for the modal dialog -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h2>Custom message goes here</h2>
+        <input id="modalInp" type="number" placeholder="QR Digit">
+        <button class="close" id="modalBtn">Close</button>
+      </div>
+    </div>
+    <!-- HTML code that is displayed -->
+    <div id="image">
+        <div id="navbar">
+            <h1 id = "logInfo">Login: Admin</h1>
+            <button id="QRDigit" onclick="setQRDigits()">Set QR Digit</button>
+        </div>
+        <div id="container1">
+            <div id="tab">
+                <!-- Tab links -->
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Add Farmer')">Add Farmer</button>
+                    <button class="tablinks" onclick="openTab(event, 'Farmer List'); FarmerList()">Farmer List</button>
+                    <button class="tablinks" onclick="openTab(event, 'Add QA Lab')">Add QA Lab</button>
+                    <button class="tablinks" onclick="openTab(event, 'QA Lab list'); QALablist()">QA Lab list</button>
+                    <button class="tablinks" onclick="openTab(event, 'Add Dairy Plant')">Add Dairy Plant</button>
+                    <button class="tablinks" onclick="openTab(event, 'Dairy Plant list'); ProcIndList()">Dairy Plant list</button>
+                </div>
+                <!-- Tab content -->
+                <div id="tabContent">
+
+                    <div id="Add Farmer" class="tabcontent">
+                        <form class="tabform">
+                            <h2 class="tabHeading">Add Farmer</h2>
+                            <label>
+                              ETH Address:
+                              <input type="text" placeholder="Address" id="farmerAddress">
+                            </label>
+                            <br>
+                            <label>
+                              Farmer Name:
+                              <input type="text" placeholder="Name" id="farmerName">
+                            </label>
+                            <br>
+                            <label>
+                              Registration ID:
+                              <input type="text" placeholder="Registration ID" id="regnID">
+                            </label>
+                            <br>
+                            <label>
+                              Farmer PIN Code:
+                              <input type="number" id="FarmerPinCode" placeholder="PIN Code">
+                            </label>
+                            <br>
+                            <label>
+                              KYC status:
+                              <input type="checkbox" id="kycStatus">
+                            </label>
+                            <br>
+                            <button type="submit" onclick="addFarmer()">Submit</button>
+                        </form>
+                    </div>
+              
+                    <div id="Farmer List" class="tabcontent">
+                        <form class="tabform">
+                            <h2 class="tabHeading">Farmers Added</h2>
+                            <ul class="list scroll-container">
+                            </ul>
+                        </form>
+                    </div>
+
+                    <div id="Add QA Lab" class="tabcontent">
+                        <form class="tabform">
+                            <h2 class="tabHeading">Add QA Lab</h2>
+                            <label>
+                              ETH Address:
+                              <input type="text" id="QALab" placeholder="Address">
+                            </label>
+                            <br>
+                            <label>
+                              QA Lab Name:
+                              <input type="text" id="QALabName" placeholder="Name">
+                            </label>
+                            <br>
+                            <label>
+                              NABL Accreditation No.:
+                              <input type="text" id="NABLacrdNo" placeholder="Accreditation Number">
+                            </label>
+                            <br>
+                            <label>
+                              Lab PIN Code:
+                              <input type="number" id="LabPinCode" placeholder="PIN Code">
+                            </label>
+                            <br>
+                            <button type="submit" onclick="addQALab()">Submit</button>
+                        </form>
+                    </div>
+                    
+                    <div id="QA Lab list" class="tabcontent">
+                        <form class="tabform">
+                            <h2 class="tabHeading">QA Labs Added</h2>
+                            <ul class="list scroll-container">
+                            </ul>
+                        </form>
+                    </div>
+
+                    <div id="Add Dairy Plant" class="tabcontent scroll-container">
+                        <form class="tabform">
+                            <h2 class="tabHeading">Add Dairy Plant</h2>
+                            <label>
+                              ETH Address:
+                              <input type="text" id="DairyAddress" placeholder="Address">
+                            </label>
+                            <br>
+                            <label>
+                              Dairy Name:
+                              <input type="text" id="DairyName" placeholder="Name">
+                            </label>
+                            <br>
+                            <label>
+                              NABL Accreditation No.:
+                              <input type="text" id="NABLAccrNo" placeholder="Accreditation Number">
+                            </label>
+                            <br>
+                            <label>
+                              NABL Accreditation Validity:
+                              <input type="date" id="NABLAccrValidUpto">
+                            </label>
+                            <br>
+                            <label>
+                              FSSAI Registration No.:
+                              <input type="number" id="FSSAIRegnNo" placeholder="Registration Number">
+                            </label>
+                            <br>
+                            <label>
+                              FSSAI License Validity:
+                              <input type="date" id="FSSAILicenseValidUpto">
+                            </label>
+                            <br>
+                            <label>
+                              Dairy PIN Code:
+                              <input type="number" id="DairyPinCode" placeholder="PIN Code">
+                            </label>
+                            <br>
+                            <label>
+                              Dairy status:
+                              <input type="checkbox" id="DairyStatus">
+                            </label>
+                            <br>
+                            <button type="submit" onclick="addDairyPlant()">Submit</button>
+                        </form>
+                    </div>       
+
+                    <div id="Dairy Plant list" class="tabcontent">
+                        <form class="tabform">
+                            <h2 class="tabHeading">Dairy Plants Added</h2>
+                            <ul class="list scroll-container"></ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="assets/js/web3.min.js"></script>
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/contracts.js"></script>
+</body>
+</html>

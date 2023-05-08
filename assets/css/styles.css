@@ -1,0 +1,465 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*:not(i) {
+    font-family: "Poppins", sans-serif;
+}
+
+canvas{
+    height:99.5vh;
+    background-color: #23153c;
+    /* background-image: url('../../BG.png'); */
+    display: flex;
+}
+
+#image{
+    background-image: url(../img/BG.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#navbar{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 50px;
+    background: hsla(263, 48%, 16%, 0.151);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+}
+
+#logInfo{
+    top: 12.5px;
+    align-self: center;
+    font-size: 25px;
+    color: #f8fbff;
+    font-family:'Roboto', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+#QRDigit{
+  margin-left: 40px;
+  background-color: #aa9ebe00;
+  color: #ebf3fc;
+  border-radius: 10px 10px 10px 10px;
+  border-color: #ffffff;
+  padding: 10px;
+  height: 70%;
+  align-self: center;
+}
+
+#QRDigit:hover{
+  background-color: #aa9ebe2a;
+}
+
+#container1{
+  position: absolute;
+  top: 10%;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Container{
+  height: 80%;
+  width: 80%;
+  border-radius: 10px;
+  background-color: #27486d;
+  background: hsla(231, 48%, 16%, 0.1);
+  backdrop-filter: blur(54px);
+  box-shadow: 0 10px 20px rgba(38, 33, 61, 0.7);
+  border-top: 1px solid rgba(157, 203, 255, 0.3);
+  border-left: 1px solid rgba(157, 203, 255, 0.3);
+  animation: fadeEffect 1s;
+  border-radius: 20px;
+  color: #dee4f8;
+  position: absolute;
+  top:10%;
+  left: 10%;
+  display: flex;
+}
+
+.loginImg{
+  margin: auto;
+  height: 80%;
+}
+
+.mainForm{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+  align-items: center;
+  color: #a6bfdf;
+}
+
+.mainForm > h2{
+  padding-bottom: 30px;
+  align-self: center;
+  width: 75%;
+  text-align: center;
+}
+
+.mainForm > bold{
+  padding-bottom: 70px;
+  align-self: center;
+  width: 80%;
+  text-align: center;
+}
+
+.mainForm > h3{
+  align-self: center;
+  width: 80%;
+  text-align: center;
+  color: #c0d6f0;
+}
+
+.mainForm > div{
+  display: flex;
+}
+
+.data{
+  height: 38px;
+  display: block;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#logo{
+  height: 30%;
+  width: auto;
+  align-self: center;
+  margin-bottom: 15%;
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo > h1{
+  text-align: center;
+  color: #a6bfdf;
+  align-self: center;
+  width: 80%;
+}
+
+#customer{
+  width: 100%;
+  flex-direction: column;
+  align-self: center;
+}
+
+#customerQuery{
+  width: 100%;
+}
+
+#queryBox{
+  width: 100%;
+  margin-left: 7%;
+}
+
+.innerQueryList{
+  margin-left: 5%;
+  animation: fadeEffect .8s;
+}
+
+#summary{
+  width: 40%;
+  height: 300px;
+  margin-left: 5%;
+  animation: fadeEffect 2s;
+  background: hsla(231, 48%, 16%, 0.2);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+#summary > p{
+  margin: 30px 15px;
+  font-size: 18px;
+}
+
+.statsIcon{
+  height: 25px;
+  width: auto;
+  margin-right: 7px;
+  margin-bottom: -5PX;
+}
+
+#queryOptions{
+  width: 60%;
+  margin-top: 4%;
+}
+
+#queryOptions > button{
+  margin: 0px 10px;
+  color: #bccfe7;
+}
+
+#tab{
+    width: 93%;
+    height: 86vh;
+    display: flex;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(38, 33, 61, 0.7);
+    border-top: 1px solid rgba(157, 203, 255, 0.3);
+    border-left: 1px solid rgba(157, 203, 255, 0.3);
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 20px 20px rgba(38, 33, 61, 0.1);
+}
+
+#tabContent{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tablinks{
+    align-self:self-end;
+    width: 70%;
+}
+  
+  /* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: #aa9ebe39;
+    color: #ebf3fc;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 25px 16px;
+    margin: 10px 0px;
+    border-radius: 10px 0px 0px 10px;
+}
+  
+  /* Change background color of buttons on hover */
+.tab button:hover {
+    transition: .5s;
+    background-color: #203470ad;
+}
+  
+  /* Create an active/current tablink class */
+.tab button.active {
+    transition: .5s;
+    background: linear-gradient(90deg, #1d2e61, #243f91, #1d2e61);
+    border-inline-start: 2px solid #cde0f8;
+}
+  
+/* Style the tab content */
+.tabcontent {
+    padding: 6px 12px;
+    display: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    color: #cde0f8;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.tabHeading{
+    margin-bottom: 60px;
+}
+
+.tabform{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #dee4f8; 
+    border-radius: 4px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #203470;
+    border-radius: 4px; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1d2e61; 
+  }
+
+
+label{
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 60%;
+}
+
+input[type="checkbox"]{
+    position: relative;
+    right: 29%;
+    width: 15px;
+}
+
+button[type="submit"] {
+    background: linear-gradient(45deg, #1d2e61, #243f91, #1d2e61);
+    color: white;
+    width: 80%;
+    max-width: 350px;
+    align-self: center;
+    padding: 10px 20px;
+    border: solid 1px rgba(205, 225, 255, 0.562);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #1d2e61, #2a48a3, #1d2e61);
+}
+
+button.mainbtn{
+  width: 100px;
+  margin: 0px 5px;
+}
+
+li,p{
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  margin-bottom: 10px;
+}
+
+.list{
+  height: 400px;
+}
+
+.listItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.innerList{
+  margin-left: 30px;
+  margin-top: 10px;
+  background: hsla(231, 48%, 16%, 0.3);
+  padding: 10px;
+  padding-left: 25px;
+  border-radius: 10px;
+}
+
+.queryList{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.innerQueryList{
+  background: hsla(231, 48%, 16%, 0.2);
+  border-radius: 10px;
+  width: 40%;
+  padding: 20px;
+  overflow: auto;
+  height: 300px;
+}
+
+.plus{
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  width: 20%;
+}
+
+.mainForm > ul{
+  height: 400px;
+  overflow: auto;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #27486d;
+  background: hsla(231, 48%, 16%, 0.1);
+  backdrop-filter: blur(54px);
+  box-shadow: 0 10px 20px rgba(38, 33, 61, 0.7);
+  border-top: 1px solid rgba(157, 203, 255, 0.3);
+  border-left: 1px solid rgba(157, 203, 255, 0.3);
+  animation: fadeEffect .8s;
+  border-radius: 20px;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 60%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #dee4f8;
+}
+
+/* Close button */
+.close {
+  background-color: #1d2e613b;
+  color:rgb(220, 237, 255);
+  float: right;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  animation: fadeEffect 1s;
+}
+
+.close:hover,
+.close:focus {
+  color: #c3d6ec;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modalInp{
+  display: none;
+}

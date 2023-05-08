@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Milk Supply Chain</title>
+</head>
+<body>
+    <!-- HTML code for the modal dialog -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h2>Custom message here</h2>
+        <input id="modalInp" type="number" placeholder="QR Digit">
+        <button class="close" id="modalBtn">Close</button>
+      </div>
+    </div>
+    <!-- HTML code that is displayed -->
+    <div id="image">
+        <div id="navbar">
+            <h1 id = "logInfo">Customer Page</h1>
+        </div>
+        <div class="Container">
+            <div class="logo">
+                <img src="assets/img/KgpLogo.png" alt="Kgp Logo" id="logo">
+                <h1>Blockchain Enabled Provenance System for Milk Supply</h1>
+            </div>
+            <div class="mainForm" id="customer">
+                <h3>Enter Product QR to trace the product</h3>
+                <div>
+                    <input type="number" placeholder="Enter QR code" id="QRValue" class="data">
+                    <button type="submit" class="mainbtn" onclick="customerQuery()">Trace</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="assets/js/web3.min.js"></script>
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/contracts.js"></script>
+</body>
+</html>
+

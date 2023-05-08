@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>QA Lab</title>
+</head>
+<body>
+    <!-- HTML code for the modal dialog -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h2>Custom message goes here</h2>
+        <input id="modalInp" type="number" placeholder="QR Digit">
+        <button class="close" id="modalBtn">Close</button>
+      </div>
+    </div>
+    <!-- HTML code that is displayed -->
+    <div id="image">
+        <div id="navbar">
+            <h1 id = "logInfo">Login: QA Lab</h1>
+        </div>
+        <div id="container1">
+            <div id="tab">
+                <!-- Tab links -->
+                <div class="tab">
+                    <button class="tablinks" onclick="openTab(event, 'Add QA data')">Add QA data</button>
+                </div>
+                <!-- Tab content -->
+                <div id="tabContent">
+                    <div id="Add QA data" class="tabcontent">
+                        <form class="tabform">
+                            <h2 class="tabHeading">Add QA data</h2>
+                            <label>
+                              Beneficiary Address:
+                              <input type="text" id="beneficiary" placeholder="Address">
+                            </label>
+                            <br>
+                            <label>
+                              Sample ID:
+                              <input type="number" id="sampleID" placeholder="ID">
+                            </label>
+                            <br>
+                            <label>
+                              QR Code:
+                              <input type="number" id="QR" placeholder="QR">
+                            </label>
+                            <br>
+                            <label>
+                              Sample pH:
+                              <input type="number" id="pH" placeholder="pH">
+                            </label>
+                            <br>
+                            <label>
+                              Reception Temperature:
+                              <input type="number" id="receptionTemp" placeholder="Temperature">
+                            </label>
+                            <br>
+                            <label>
+                              Solids Not Fat(SNF) Percentage:
+                              <input type="number" id="SNFPercent" placeholder="Percentage">
+                            </label>
+                            <br>
+                            <label>
+                              Fat Percentage:
+                              <input type="number" id="fatPercent" placeholder="Percentage">
+                            </label>
+                            <br>
+                            <label>
+                              Lactose Percentage:
+                              <input type="number" id="lactosePercent" placeholder="Percentage">
+                            </label>
+                            <br>
+                            <label>
+                              QA Pass:
+                              <input type="checkbox" id="QAPass">
+                            </label>
+                            <br>
+                            <button type="submit" onclick="addQAData()">Submit</button>
+                        </form>
+                    </div>
+                  
+                    <!-- <div id="View QA data" class="tabcontent">
+                        <form class="tabform">
+                          <h2 class="tabHeading">QA data Added</h2>
+                          <ul class="list scroll-container"></ul>
+                        </form>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="assets/js/web3.min.js"></script>
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/contracts.js"></script>
+</body>
+</html>

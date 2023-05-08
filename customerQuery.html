@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Milk Supply Chain</title>
+</head>
+<body>
+    <!-- HTML code that is displayed -->
+    <div id="image">
+        <div id="navbar">
+            <h1 id = "logInfo">Customer Page</h1>
+        </div>
+        <div class="Container">
+            <div class="mainForm" id="customerQuery">
+                <div id="queryBox">
+                    <ul style="width: 40%; margin-top:2%;">
+                        <li class='queryList'><p>1. Basic Product Details</p><span class='plus pdt'>&#43;</span></li>
+                        <li class='queryList'><p>2. Farmer/VDCS Details</p><span class='plus pdt'>&#43;</span></li>
+                        <li class='queryList'><p>3. Quality Assurance Lab Details</p><span class='plus pdt'>&#43;</span></li>
+                        <li class='queryList'><p>4. Dairy Plant Details</p><span class='plus pdt'>&#43;</span></li>
+                        <li class='queryList'><p>5. Quality Assurance Lab Data</p><span class='plus pdt'>&#43;</span></li>
+                        <li class='queryList'><p>6. Pre-Processing QA test Data</p><span class='plus pdt'>&#43;</span></li>
+                        <li class='queryList'><p>7. Processing Data</p><span class='plus pdt'>&#43;</span></li>
+                    </ul>
+                    <div id="summary">
+                        <h2>Product Summary</h2>
+                        <p><img class="statsIcon" id="ic1" src="assets/img/tick.png"> Farmer/VDCS kyc</p>
+                        <p><img class="statsIcon" id="ic2" src="assets/img/tick.png">Quality Assurance</p>
+                        <p><img class="statsIcon" id="ic3" src="assets/img/tick.png">Pre-Processing</p>
+                        <p><img class="statsIcon" id="ic4" src="assets/img/tick.png">Processing</p>
+                    </div>
+                </div>
+                <div id="queryOptions">
+                    <button type="submit" onclick="newQR()">Trace Another Product</button>
+                    <button type="submit" onclick="showSummary()">Show Product Summary</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="assets/js/web3.min.js"></script>
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/contracts.js"></script>
+    <script src="assets/js/customerQuery.js"></script>
+</body>
+</html>
+

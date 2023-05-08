@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Login</title>
+</head>
+<body>
+    <!-- HTML code for the modal dialog -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h2>Custom message here</h2>
+        <input id="modalInp" type="number" placeholder="QR Digit">
+        <button class="close" id="modalBtn">Close</button>
+      </div>
+    </div>
+    <!-- HTML code that is displayed -->
+    <div id="image">
+        <div id="navbar">
+            <h1 id = "logInfo">Login Page</h1>
+        </div>
+        <div class="Container customer">
+            <img src="assets/img/BGLogin.png" alt="Login Page" class="loginImg">
+            <div class="mainForm">
+                <h2>Milk Supply Chain end-to-end Traceability Solution</h2>
+                <bold>Milk supply chain end-to-end traceability solutions provide an efficient and transparent way of tracking milk products through all stages of production and distribution. These solutions help to maintain product quality and safety, minimize waste, and reduce the risk of product recalls.</bold>
+                <h3>Enter Your Login Address</h3>
+                <div>
+                    <input type="text" placeholder="Enter your ETH Address" id="loginAdd" class="data">
+                    <button type="submit" class="mainbtn" onclick="loginAuth()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="assets/js/web3.min.js"></script>
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/contracts.js"></script>
+</body>
+</html>
+
